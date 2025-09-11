@@ -77,6 +77,27 @@
             vertical-align: middle; /* Ensures consistent vertical alignment with text */
             flex-shrink: 0; /* Prevents shrinking in flex containers */
         }
+        
+        /* Contact Section Background with Overlay */
+        .contact-section-bg {
+            background-image: url('blanklogostorefront.png');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .contact-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black overlay for readability */
+            z-index: 1;
+        }
+        .contact-content {
+            position: relative;
+            z-index: 2;
+        }
     </style>
 </head>
 <body class="text-gray-800">
@@ -85,7 +106,7 @@
     <header class="bg-white shadow-md py-6">
         <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
             <div class="flex items-center mb-4 md:mb-0">
-                <img src="logo.png" alt="Blank Removal Logo" class="h-16 mr-3 rounded"> <!-- Logo size increased to h-16 -->
+                <img src="logo.png" alt="Blank Removal Logo" class="h-20 mr-3 rounded"> <!-- Logo size increased to h-20 -->
                 <!-- Removed the span containing "BLANK REMOVAL" text -->
             </div>
             <nav>
@@ -275,8 +296,9 @@
     </section>
 
     <!-- Get Started Today Section (Call to Action) -->
-    <section id="contact" class="gradient-bg text-white py-20 px-4 text-center">
-        <div class="container mx-auto">
+    <section id="contact" class="contact-section-bg text-white py-20 px-4 text-center">
+        <div class="contact-overlay"></div>
+        <div class="container mx-auto contact-content">
             <h2 class="text-4xl font-extrabold mb-6">CONTACT US TO GET STARTED!</h2>
             <p class="text-xl md:text-2xl mb-8">Fill out the form below and we'll be in touch shortly to help you launch your business.</p>
 
@@ -317,7 +339,7 @@
     <footer class="bg-gray-900 text-white py-8 px-4">
         <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
             <div class="mb-4 md:mb-0 md:w-1/3 text-center md:text-left">
-                <img src="logo.png" alt="Blank Removal Logo Large" class="h-20 md:h-24 lg:h-32 mx-auto md:mx-0 rounded"> <!-- Big logo -->
+                <img src="logo.png" alt="Blank Removal Logo Large" class="h-28 md:h-32 lg:h-40 mx-auto md:mx-0 rounded"> <!-- Big logo -->
             </div>
             <div class="md:w-2/3 text-center">
                 <p>&copy; 2025 Blank Removal. All rights reserved.</p>
